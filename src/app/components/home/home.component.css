@@ -1,0 +1,24 @@
+.jumbotron{
+    height: 600px;
+    background: 
+        linear-gradient(rgba(2, 32, 60, 0.50) 0%,
+        rgba(48, 48, 48, 0.5) 100%),
+        url('https://vsoft.net.in/wp-content/uploads/2016/12/mbanner1.png');
+    background-position: center center;
+    background-size: cover;
+    color: #ffffff;
+}
+.texto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.txt_{
+    width: 100%;
+}
+.t{
+    margin-top: -380px;
+}

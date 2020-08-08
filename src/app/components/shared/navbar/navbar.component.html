@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" [routerLink]="['home']">
             <img [src]="urlImage | securityDom " width="40" height="40" alt="" loading="lazy">
         </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,14 +9,14 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Inicio</a>
+        <li class="nav-item" routerLinkActive='active'>
+          <a class="nav-link" [routerLink]="['/home']">Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Consumo Api</a>
+        <li class="nav-item" routerLinkActive='active'>
+          <a class="nav-link" [routerLink]="['/consumo-api']">Consumo Api</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Crud</a>
+        <li class="nav-item" routerLinkActive='active'>
+          <a class="nav-link" [routerLink]="['/ejemplo-crud']">Crud</a>
         </li>
       </ul>
     </div>

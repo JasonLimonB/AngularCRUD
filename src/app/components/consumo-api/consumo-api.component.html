@@ -1,0 +1,18 @@
+<div  class="container mt-5 mb-5">
+    <div class="row mt-5 mb-5">
+        <div class="col-12 text-center">
+            <h2 class="display-5">Una de mis series favoritas</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-4" *ngFor="let data of pokemonData">
+            <div class="card mt-5" style="width: 18rem;">
+                <img [src]="data.image" class="card-img-top" [alt]="data.character">
+                <div class="card-body">
+                  <h5 class="card-title"> {{ data.character }} </h5>
+                  <p class="card-text"> {{ data.quote }} </p>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

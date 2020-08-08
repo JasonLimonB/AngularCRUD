@@ -1,1 +1,32 @@
-<p>home works!</p>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container texto">
+        <div class="txt_">
+            <h1 class="display-4">Jason Limon</h1>    
+        </div>
+        
+        <div class="txt_ t">
+            <p>[Springboot, Angular, Python]</p>    
+        </div>
+        
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row ">
+        <div class="col-12 text-center mt-5 mb-5">
+            <h2 class="display-5">Tecnologias que he manejado</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-sm-12" *ngFor="let dato of dataBlog">
+            <div class="card" style="width: 18rem;">
+                <img [src]=" dato.img " class="card-img-top" [alt]=" dato.img ">
+                <div class="card-body">
+                  <h5 class="card-title"> {{ dato.titulo }} </h5>
+                  <p class="card-text"> {{ dato.descripcion }} </p>
+                  <a href="#" class="btn btn-outline-primary btn-block">Leer mas...</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
