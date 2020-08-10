@@ -11,6 +11,8 @@ import { ConsumoApiComponent } from './components/consumo-api/consumo-api.compon
 import { CrudComponent } from './components/crud/crud.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { NuevoUsuarioComponent } from './components/nuevo-usuario/nuevo-usuario.component';
+import { ListadoUsuarioComponent } from './components/listado-usuario/listado-usuario.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     SecurityDomPipe,
     ConsumoApiComponent,
-    CrudComponent
+    CrudComponent,
+    NuevoUsuarioComponent,
+    ListadoUsuarioComponent
   ],
   imports: [
     BrowserModule,
