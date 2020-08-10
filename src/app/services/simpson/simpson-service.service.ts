@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class SimpsonServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getdataPokemon(): any{
+  getData(): any{
     return this.http.get('https://thesimpsonsquoteapi.glitch.me/quotes?count=40');
   }
 

@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { SimpsonServiceService } from '../../services/pokemon/simpson-service.service'
+import { SimpsonServiceService } from '../../services/simpson/simpson-service.service'
 
 @Component({
   selector: 'app-consumo-api',
   templateUrl: './consumo-api.component.html',
-  styleUrls: ['./consumo-api.component.css']
+  styleUrls: ['./consumo-api.component.css'],
+  providers: [ SimpsonServiceService ]
 })
 export class ConsumoApiComponent implements OnInit {
 
@@ -16,11 +17,11 @@ export class ConsumoApiComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this._servicePokemon.getdataPokemon()
+    this._servicePokemon.getData()
       .subscribe((data : any) => {
         this.pokemonData = data;
       });
-      console.log(this.pokemonData);
+      
   }
 
 }
