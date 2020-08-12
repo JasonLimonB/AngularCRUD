@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NuevoUsuarioComponent } from './components/nuevo-usuario/nuevo-usuario.component';
 import { ListadoUsuarioComponent } from './components/listado-usuario/listado-usuario.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,8 @@ import { ListadoUsuarioComponent } from './components/listado-usuario/listado-us
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
   ],

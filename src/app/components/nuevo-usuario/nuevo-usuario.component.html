@@ -1,22 +1,49 @@
+
 <div class="col-12 cont-form animate__animated animate__fadeIn">
-    <form>
+
+  <div class="alert alert-info alert-dismissible fade show" role="alert">
+    <strong>Hey!!</strong>, favor de llenar todos los campos
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+    <form [formGroup]="nuevoUsuario" (ngSubmit)="enviar()">
 
         <div class="form-group">
           <label for="exampleInputEmail1">Nombre</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input
+            formControlName="nombre" 
+            [class.is-invalid]="nombreNoValido"
+            type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small *ngIf="nombreNoValido" class="text-danger"> Campo requerido, minimo 5 caracteres </small>
         </div>
 
         <div class="form-group">
             <label for="exampleInputEmail1">Apellido</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input 
+              formControlName="apellido"
+              [class.is-invalid]="apellidoNoValido"
+              type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small *ngIf="apellidoNoValido" class="text-danger"> Campo requerido, minimo 5 caracteres </small>
         </div>
 
         <div class="form-group ">
             <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input 
+              formControlName="email"
+              [class.is-invalid]="correoNoValido"
+              type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small *ngIf="correoNoValido" class="text-danger"> Campo requerido, favor de poner un correo valido </small>
         </div>
 
         <button type="submit" class="btn btn-primary">Registrar</button>
 
       </form>    
+</div>
+
+<div class="container mx-auto mt-5">
+  <div>Estado del formulario {{ nuevoUsuario.valid }} </div>
+  <div> {{ nuevoUsuario.status }} </div>
+  <div> {{ nuevoUsuario.value | json }} </div>
 </div>

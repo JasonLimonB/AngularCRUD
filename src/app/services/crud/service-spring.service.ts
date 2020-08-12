@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { INuevoUsuario } from '../../interfaces/inuevoUsuario';
 
 @Injectable()
 export class ServiceSpringService {
@@ -9,8 +10,16 @@ export class ServiceSpringService {
     private http: HttpClient
   ) { }
 
+  private nuevoUser = 'http://localhost:8080/nuevoUsuario';
+
   getListUsuarios() :any{
     return this.http.get('/usuarios');
+  }
+
+  crearUsuarioNuevo( usuario: INuevoUsuario ){
+
+    return this.http.post(this.nuevoUser, usuario);
+
   }
 
 }
