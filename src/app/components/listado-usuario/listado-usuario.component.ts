@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceSpringService } from '../../services/crud/service-spring.service';
+import { Router } from '@angular/router';
 
 import Swal from 'sweetalert2';
 
@@ -14,7 +15,8 @@ export class ListadoUsuarioComponent implements OnInit {
   public usuarios:any = [];
 
   constructor(
-    private _crud: ServiceSpringService
+    private _crud: ServiceSpringService,
+    private _router:Router
   ) { }
 
   ngOnInit(): void {
@@ -40,9 +42,7 @@ export class ListadoUsuarioComponent implements OnInit {
       cancelButtonColor: '#d33',
       confirmButtonText: 'Si, eliminar'
     }).then((result) => {
-      console.log(result.value);
       if (result.value) {
-        
         this._crud.eliminarUsuario( id )
           .subscribe( (data: any) =>{
             if( data === null ) {
@@ -59,16 +59,12 @@ export class ListadoUsuarioComponent implements OnInit {
               )
             }
           });
-        
-        /*
-        Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
-          'success'
-        )
-        */
       }
     });
+  }
+
+  editarUser( id: string ){
+    this._router.navigate(['/ejemplo-crud/editarUsuario/',id]);
   }
 
 }

@@ -25,4 +25,8 @@ export class ServiceSpringService {
     return this.http.get(`http://localhost:8080/eliminarUsuario/${id}`);
   }
 
+  buscarUsuario( id: string ){
+    return this.http.get('http://localhost:8080/usuarios/'+id);
+  }
+
 }

@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { ServiceSpringService } from '../../services/crud/service-spring.service';
 
 import Swal from 'sweetalert2';
+import { INuevoUsuario } from 'src/app/interfaces/inuevoUsuario';
 
 @Component({
   selector: 'app-nuevo-usuario',

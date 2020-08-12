@@ -5,6 +5,7 @@ import { ConsumoApiComponent } from './components/consumo-api/consumo-api.compon
 import { CrudComponent } from './components/crud/crud.component';
 import { NuevoUsuarioComponent } from './components/nuevo-usuario/nuevo-usuario.component';
 import { ListadoUsuarioComponent } from './components/listado-usuario/listado-usuario.component';
+import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
       children: [
         { path: 'nuevoUsuario', component: NuevoUsuarioComponent },
         { path: 'listadoUsuarios', component: ListadoUsuarioComponent },
+        { path: 'editarUsuario/:id', component: EditarUsuarioComponent },
         { path: '**', pathMatch: 'full', redirectTo: 'listadoUsuarios' }
       ]
   },

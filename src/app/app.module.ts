@@ -15,6 +15,7 @@ import { NuevoUsuarioComponent } from './components/nuevo-usuario/nuevo-usuario.
 import { ListadoUsuarioComponent } from './components/listado-usuario/listado-usuario.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditarUsuarioComponent } from './components/editar-usuario/editar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ConsumoApiComponent,
     CrudComponent,
     NuevoUsuarioComponent,
-    ListadoUsuarioComponent
+    ListadoUsuarioComponent,
+    EditarUsuarioComponent
   ],
   imports: [
     BrowserModule,
