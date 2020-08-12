@@ -15,7 +15,7 @@
           <input
             formControlName="nombre" 
             [class.is-invalid]="nombreNoValido"
-            type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            type="text" class="form-control" aria-describedby="emailHelp">
             <small *ngIf="nombreNoValido" class="text-danger"> Campo requerido, minimo 5 caracteres </small>
         </div>
 
@@ -24,7 +24,7 @@
             <input 
               formControlName="apellido"
               [class.is-invalid]="apellidoNoValido"
-              type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              type="text" class="form-control"  aria-describedby="emailHelp">
               <small *ngIf="apellidoNoValido" class="text-danger"> Campo requerido, minimo 5 caracteres </small>
         </div>
 
@@ -33,7 +33,7 @@
             <input 
               formControlName="email"
               [class.is-invalid]="correoNoValido"
-              type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              type="email" class="form-control" aria-describedby="emailHelp">
               <small *ngIf="correoNoValido" class="text-danger"> Campo requerido, favor de poner un correo valido </small>
         </div>
 

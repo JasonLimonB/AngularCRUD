@@ -3,6 +3,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { ServiceSpringService } from '../../services/crud/service-spring.service';
 
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-nuevo-usuario',
   templateUrl: './nuevo-usuario.component.html',
@@ -53,9 +55,16 @@ export class NuevoUsuarioComponent implements OnInit {
     }else {
       this._UsuarioS.crearUsuarioNuevo(this.nuevoUsuario.value)
         .subscribe( (data:any) => {
-          console.log(data);
+          this.nuevoUsuario.reset();
+          if(data.id > 0){
+            Swal.fire(
+              'Registrado',
+              'Ha sido registrado con exito',
+              'success'
+            );
+          }
         });
-      this.nuevoUsuario.reset();
+      
     }
 
 

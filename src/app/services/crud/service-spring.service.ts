@@ -11,15 +11,18 @@ export class ServiceSpringService {
   ) { }
 
   private nuevoUser = 'http://localhost:8080/nuevoUsuario';
+  
 
   getListUsuarios() :any{
     return this.http.get('/usuarios');
   }
 
   crearUsuarioNuevo( usuario: INuevoUsuario ){
-
     return this.http.post(this.nuevoUser, usuario);
+  }
 
+  eliminarUsuario(id: any){
+    return this.http.get(`http://localhost:8080/eliminarUsuario/${id}`);
   }
 
 }
